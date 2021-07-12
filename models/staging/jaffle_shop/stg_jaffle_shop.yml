@@ -1,0 +1,18 @@
+version: 2
+
+models:
+    - name: stg_customers
+      description: One unique customer per row
+      columns:
+        - name: customer_id
+          description: Primary key for stg_customers
+          tests: 
+            - unique
+            - not_null
+    - name: stg_orders
+      columns:
+        - name: status
+          description: This is Carter putting in new documentation
+          tests:
+            - accepted_values:
+                values: ['returned', 'completed', 'shipped', 'placed', 'return_pending']
