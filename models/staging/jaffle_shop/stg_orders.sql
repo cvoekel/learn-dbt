@@ -10,4 +10,4 @@ with orders as (
 
 )
 Select * from orders
-
+{{ limit_data_in_dev() }}
